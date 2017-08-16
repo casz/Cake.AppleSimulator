@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>Cake.AppleSimulator</id>
+    <id>Cake.AppleSimulator.Casz</id>>
     <version>$version$</version>
     <description>Cake Build addin for managing Apple (iOS/TV/Watch) simulators.</description>
-    <summary>Cake Build addin for managing Apple (iOS/TV/Watch) simulators.</summary>
+    <summary>Cake Build addin for managing Apple (iOS/TV/Watch) simulators. This is a fork of Cake.AppleSimulator</summary>
     <language>en-us</language>
   </metadata>
   <files>

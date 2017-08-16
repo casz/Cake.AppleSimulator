@@ -36,12 +36,12 @@ var isRunningOnWindows = IsRunningOnWindows();
 
 var isRunningOnAppVeyor = AppVeyor.IsRunningOnAppVeyor;
 var isPullRequest = AppVeyor.Environment.PullRequest.IsPullRequest;
-var isRepository = StringComparer.OrdinalIgnoreCase.Equals("ghuntley/cake.applesimulator", AppVeyor.Environment.Repository.Name);
+var isRepository = StringComparer.OrdinalIgnoreCase.Equals("casz/Cake.AppleSimulator", AppVeyor.Environment.Repository.Name);
 
 var isReleaseBranch = StringComparer.OrdinalIgnoreCase.Equals("master", AppVeyor.Environment.Repository.Branch);
 var isTagged = AppVeyor.Environment.Repository.Tag.IsTag;
 
-var githubOwner = "ghuntley";
+var githubOwner = "casz";
 var githubRepository = "Cake.AppleSimulator";
 var githubUrl = string.Format("https://github.com/{0}/{1}", githubOwner, githubRepository);
 
@@ -72,13 +72,13 @@ Action<string, string> Package = (nuspec, basePath) =>
     Information("Packaging {0} using {1} as the BasePath.", nuspec, basePath);
 
     NuGetPack(nuspec, new NuGetPackSettings {
-        Authors                  = new [] { "Geoffrey Huntley" },
-        Owners                   = new [] { "ghuntley" },
+        Authors                  = new [] { "Joseph Petersen" },
+        Owners                   = new [] { "casz" },
 
-        ProjectUrl               = new Uri("https://ghuntley.com/"),
-        IconUrl                  = new Uri("https://raw.githubusercontent.com/cake-build/graphics/master/png/cake-medium.png"),
+        ProjectUrl               = new Uri("https://github.com/casz/Cake.AppleSimulator"),
+        IconUrl                  = new Uri("https://cdn.rawgit.com/cake-contrib/graphics/a5cf0f881c390650144b2243ae551d5b9f836196/png/cake-contrib-medium.png"),
         LicenseUrl               = new Uri("https://opensource.org/licenses/MIT"),
-        Copyright                = "Copyright (c) Geoffrey Huntley",
+        Copyright                = "Copyright (c) Joseph Petersen",
         RequireLicenseAcceptance = false,
 
         Version                  = nugetVersion,
@@ -97,7 +97,7 @@ Action<string> SourceLink = (solutionFileName) =>
     try 
     {
         GitLink("./", new GitLinkSettings() {
-            RepositoryUrl = "https://github.com/ghuntley/Cake.AppleSimulator",
+            RepositoryUrl = "https://github.com/casz/Cake.AppleSimulator",
             SolutionFileName = solutionFileName,
             ErrorsAsWarnings = treatWarningsAsErrors,
         });
